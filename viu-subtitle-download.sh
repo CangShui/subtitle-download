@@ -1,4 +1,4 @@
-#https://cangshui.net/ 沧水博客
+#https://cangshui.net/4974.html 沧水博客
 rm -rf index*
 rm -rf season*
 echo "下载的字幕文件将会存放在season目录中"
