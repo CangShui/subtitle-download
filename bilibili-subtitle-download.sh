@@ -41,3 +41,12 @@ do
   wget -N --no-check-certificate -O ./season/"$ii".bcc "$cclink"
   rm -rf ./season/"$ii"
 done
+sizeA=$(du -h --max-depth=1 ./season | awk '{print $1}' | tr -d "a-zA-Z" |sed "s/\..*//g")
+sizeB=$(find ./season  -type f | wc -l)
+sizeB=`expr $sizeB \* 2`
+if [[ $sizeA -le $sizeB ]]
+  then
+    echo "该剧集可能没有字幕文件"
+  else
+    echo ""
+fi
