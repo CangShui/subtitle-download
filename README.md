@@ -10,13 +10,13 @@ kktv.me<br>
 https://cangshui.net/4964.html<br>
 
 bilibili.com<br>
-叔叔家港澳台限制番剧 有CC字幕<br>
+叔叔家港澳台限制番剧可免费观看 有CC字幕<br>
 下载下来为bcc格式需要转码<br>
 https://cangshui.net/4935.html<br>
 
 viu.com<br>
-香港IP即可<br>
-免费网站 会员去广告<br>
+香港IP即可免费播放视频<br>
+免费网站需要看广告<br>
 下载下来为srt格式<br>
 https://cangshui.net/4974.html<br>
 
