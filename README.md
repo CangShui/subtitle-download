@@ -1,4 +1,6 @@
 # subtitle-download
+<h2>使用前请自行搜索该平台是否有你想要的资源，以及是否有外挂字幕（网页播放器会有控件）</h2>
+
 针对viu.com kktv.me bilibili.com 等视频网站的CC字幕抓取下载<br>
 
 kktv.me<br>
