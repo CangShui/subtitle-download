@@ -2,7 +2,7 @@
 rm -rf index*
 rm -rf season*
 echo "下载的字幕文件将会存放在season目录中"
-echo "输入剧集地址:(链接中为带“vod/数字”的链接，任意一集皆可，如https://www.viu.com/ott/hk/zh-hk/vod/430585/"
+echo "输入剧集地址:(链接中为带“vod/数字/名称”的链接，任意一集皆可，如https://www.viu.com/ott/hk/zh-hk/vod/417982/失格紋的最強賢者"
 read -p "请输入:" videourl
 wget -N --no-check-certificate -O index.html "$videourl"
 sed -i 's/javascript\:initVideoPlay/javascript\:initVideoPlay\n◎◎◎/g' index.html
@@ -27,6 +27,7 @@ do
   grep 'VVV' ./season/EP"$ep".html > ./season/EP"$ep"A.html
   sed -i 's/VVV//g' ./season/EP"$ep"A.html
   sed -i "s:\\\::g" ./season/EP"$ep"A.html
+  sed -i '2,$d' ./season/EP"$ep"A.html
   srturl=$(cat ./season/EP"$ep"A.html)
   wget -N --no-check-certificate -O ./season/EP"$ep".srt  "$srturl"
   ii=`expr $ii - 1`
