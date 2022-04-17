@@ -32,14 +32,15 @@ for line in $(cat season.json)
 do
   ii=`expr $ii + 1`
   echo 第$ii集$line
-  wget -N --no-check-certificate -O ./season/"$ii" "$line"
-  sed -i 's/\"subtitle_url\"\:\"/\nhttps\:/g' ./season/"$ii"
-  sed -i 's/\"\,\"type/\n/g' ./season/"$ii"
-  sed -i '/id_str/d' ./season/"$ii"
-  sed -i '/bvid/d' ./season/"$ii"
-  cclink=$( cat ./season/"$ii" | head -n 1 )
-  wget -N --no-check-certificate -O ./season/"$ii".bcc "$cclink"
-  rm -rf ./season/"$ii"
+  ep=$( printf "%02d\n" $ii )
+  wget -N --no-check-certificate -O ./season/"$ep" "$line"
+  sed -i 's/\"subtitle_url\"\:\"/\nhttps\:/g' ./season/"$ep"
+  sed -i 's/\"\,\"type/\n/g' ./season/"$ep"
+  sed -i '/id_str/d' ./season/"$ep"
+  sed -i '/bvid/d' ./season/"$ep"
+  cclink=$( cat ./season/"$ep" | head -n 1 )
+  wget -N --no-check-certificate -O ./season/"$ep".bcc "$cclink"
+  rm -rf ./season/"$ep"
 done
 sizeA=$(du -h --max-depth=1 ./season | awk '{print $1}' | tr -d "a-zA-Z" |sed "s/\..*//g")
 sizeB=$(find ./season  -type f | wc -l)
